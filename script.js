@@ -5,17 +5,18 @@ function confirmSelection() {
     var audio = document.getElementById('audio');
 
     var selectedName = null;
-    var checkboxes = nameForm.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            selectedName = checkbox.value;
+    var radioButtons = nameForm.querySelectorAll('input[type="radio"]');
+    radioButtons.forEach(function(radioButton) {
+        if (radioButton.checked) {
+            selectedName = radioButton.value;
+            radioButton.style.display = 'none'; // Hide the selected radio button
         }
     });
 
     if (selectedName) {
         resultDiv.classList.remove('hidden');
-        image.src = selectedName.toLowerCase() + '.png';
-        audio.src = selectedName.toLowerCase() + '.mp3';
+        image.src = selectedName.toLowerCase().replace(/\s+/g, '') + '.png';
+        audio.src = selectedName.toLowerCase().replace(/\s+/g, '') + '.mp3';
     } else {
         alert('Please select a name before confirming.');
     }
