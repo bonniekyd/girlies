@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Name</h1>
+        <form id="nameForm">
+            <input type="checkbox" id="Anel" value="Anel">
+            <label for="Anel">Anel</label><br>
+            <input type="checkbox" id="Dana" value="Dana">
+            <label for="Dana">Dana</label><br>
+            <input type="checkbox" id="Aru_B" value="Aru B">
+            <label for="Aru_B">Aru B</label><br>
+            <input type="checkbox" id="Aru_S" value="Aru S">
+            <label for="Aru_S">Aru S</label><br>
+            <input type="checkbox" id="Tomi" value="Tomi">
+            <label for="Tomi">Tomi</label><br>
+            <input type="checkbox" id="Aliia" value="Aliia">
+            <label for="Aliia">Aliia</label><br>
+            <button type="button" onclick="confirmSelection()">Confirm</button>
+        </form>
+    </div>
+
+    <div id="result" class="hidden">
+        <img id="image" src="" alt="Image">
+        <audio id="audio" controls autoplay></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
